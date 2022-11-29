@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* padding: 0; */
+}
+
+body {
+    background-color: lightyellow;
+    /* margin: 2em; */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 2em;
+    /* border: 1px solid red; */
+    /* min-width: 800px; */
+}
+
+.container {
+    margin-left: 3em;
+}
+
+/************** Headers and animations *****************/
+.header1 {
+    color: olive;
+    font-size: 1.5rem;
+    font-family: cursive;
+    animation: moveheading1 10s infinite;
+}
+
+@keyframes moveheading1 {
+    0% {
+        transform: translateY(-100px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    
+}
+
+.header2 {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    animation: moveheading2 10s infinite;
+}
+
+@keyframes moveheading2 {
+    0% {
+        transform: translateY(40px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translatey(-50px);
+    }
+}
+
+/************** Logo and Animation ****************/
+.left-icon {
+    width: 10%;
+    height: 10%;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    animation: moveimg 1s infinite;
+    position: relative;
+}
+
+@keyframes moveimg {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(0.2);
+    }
+}
+
+/************* SLIDE GROUP ***************/
+
+.frame {
+    /* background-color: green; */
+    overflow: hidden;
+    margin: 2em;
+    /* height: 100%; */
+    /* min-width: 600px; */
+    /* border: 1px solid purple; */
+}
+
+.slidegroup {
+    text-align: center;
+    animation: slidemove 45s infinite;
+    width: 300%;
+    /* height: 100%; */
+    /* max-width: 250%; */
+    /* border: 1px solid red; */
+}
+
+@keyframes slidemove {
+    0% {
+        transform: translateX(0vw)
+    }
+    25% {
+        transform: translateX(-96vw)
+    }
+    50% {
+        transform: translateX(-191vw)
+    }
+}
+
+.slide {
+    padding: .5em;
+    float: left;
+    width: 33.333%;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+}
+
+.slide1 {
+    background-color: khaki;
+}
+
+.slide2 {
+    background-color: peachpuff;
+}
+
+.slide3 {
+    background-color: aliceblue;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* INTRO */
+.intro {
+    height: 65vh;
+    margin: 2em;
+    /* display: grid;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 7; */
+    /* border: 1px solid red; */
+}
+
+.intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/************* Sub-Intro ***************/
+.sub-intros {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+}
+
+.sub-intro1 {
+    background: linear-gradient(to right, transparent, rgb(221, 109, 97)),
+    url(/images/intro_img1.jpg);
+    margin: 10px;
+}
+
+.sub-intro1 p {
+    padding: 2em;
+    color: white;
+    border: 1px solid lime;
+    margin: 4em;
+}
+
+.sub-intro2 {
+    border: 2px solid burlywood;
+    margin: 10px;
+    padding: 2em;
+    color: green;
+    background: linear-gradient(to bottom right, white, rgba(27, 100, 5, .3));
+}
+
+.sub-intro2 b {
+    font-size: 1.5em;
+}
+
+/* Products */
+.products-container {
+    margin: 2em;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+}
+
+.products-container h2 {
+    margin-bottom: .7em;
+}
+
+.product {
+    /* border: 1px solid purple; */
+    margin-top: 3em;
+    width: 270px;
+    text-align: center;
+}
+
+.product img {
+    object-fit: cover;
+    width: 100px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product h2 {
+    margin-top: 1em;
+}
+
+.product p {
+    margin-top: .7em;
+}
+
+.product button {
+    margin-top: 1em;
+    color: white;
+    background-color: black;
+    padding-top: .4em;
+}
+
+.product button a {
+    text-decoration: none;
+    color: white;
+}
+
+/************* Modal Windows (Products) ************/
+.modal {
+    background-color: rgba(119, 119, 119, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-window {
+    width: 40em;
+    margin: 0 auto;
+    margin-top: 10em;
+    background-color: lightyellow;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* margin: 4em; */
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 1em;
+    
+}
+
+.close-window {
+    /* border: 1px solid red; */
+    width: 20px;
+    text-align: center;
+    background-color: green;
+    text-decoration: underline;
+    color: white;
+    padding: .3em;
+    border: none;
+}
+
+.close-window a {
+    text-decoration: none;
+    color: black;
+}
+
+.modal-window hr {
+    border-color: purple;
+    /* margin-top: .5em; */
+    /* width: 45em; */
+    margin-left: 3em;
+    margin-right: 5em;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+}
+
+.img-container {
+    height: 300px;
+    margin-top: 1em;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-info {
+    text-align: left;
+}
+
+.modal-info p, h3, h5 {
+    margin-bottom: 1em;
+}
+
+.modal-info .price {
+    margin-top: 1em;
+}
+
+.modal-info h5 {
+    font-size: 1rem;
+}
+
+.content-footer {
+    background-color: lightgrey;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 1em;
+}
+
+.content-footer p {
+    margin-bottom: .5em;
+}
+
+.content-footer hr {
+    border-color: white;
+    background-color: white;
+    margin-left: 1em;
+    margin-right: 2em;
+    padding: .5px;
+}
+
+.content-footer button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: .8em;
+    background-color: white;
+    border: none;
+}
+
+.content-footer button a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Giftsets */
+.giftset-container {
+    margin: 2em;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    margin-top: 1em;
+    color: white;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav {
+    padding: 2em;
+    text-align: center;
+}
+
+footer hr {
+    background-color: white;
+    margin: 1em 2em 0 2em;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 2em;
+    margin-top: 2em;
+    /* text-align: right; */
+    /* margin-right: 2em; */
+    /* border: 1px solid red; */
+}
+
+.logos {
+    display: flex;
+    margin-top: 2em;
+    /* border: 1px solid green; */
+    width: 10em;
+    /* justify-content: flex-end; */
+    /* margin-right: 5em; */
+    /* margin-left: 77.5em; */
+    
+}
+
+.logos img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-copyrights {
+    width: 100%;
+    display: inline;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.footer-copyrights h5 {
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.footer-copyrights a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Media Queries */
+/************** Media Queries ***************/
+@media only screen and (max-width: 800px) {
+    .header1, .header2 {
+        font-size: .8rem;
+    }
+
+@keyframes slidemove {
+    0% {
+        transform: translateX(0vw);
+    }
+    25% {
+        transform: translateX(-87vw);
+    }
+    50% {
+        transform: translateX(-175vw);
+    }
+}
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .sub-intros {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-window {
+        margin-top: 3em;
+        width: 70%;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .modal-info {
+        text-align: center;
+    }
+}
